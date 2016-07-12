@@ -7,7 +7,156 @@
     <link rel="stylesheet" href="../reveal/css/theme/black.css" id="theme">
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+<style>
+    /* ============================================================================================================================
+== RECTANGLE-BORDER STYLE WITH CURVE
+** ============================================================================================================================ */
 
+    .rectangle-speech-border {
+        position:relative;
+        padding:50px 15px;
+        margin:1em 0 3em;
+        border:10px solid #5a8f00;
+        text-align:center;
+        color:#333;
+        background:#fff;
+        /* css3 */
+        -webkit-border-radius:20px;
+        -moz-border-radius:20px;
+        border-radius:20px;
+    }
+
+    /* creates larger curve */
+    .rectangle-speech-border:before {
+        content:"";
+        position:absolute;
+        z-index:10;
+        bottom:-40px;
+        left:50px;
+        width:50px;
+        height:30px;
+        border-style:solid;
+        border-width:0 10px 10px 0;
+        border-color:#5a8f00;
+        background:transparent;
+        /* css3 */
+        -webkit-border-bottom-right-radius:80px 50px;
+        -moz-border-radius-bottomright:80px 50px;
+        border-bottom-right-radius:80px 50px;
+        /* reduce the damage in FF3.0 */
+        display:block;
+    }
+
+    /* creates smaller curve */
+    .rectangle-speech-border:after {
+        content:"";
+        position:absolute;
+        z-index:10;
+        bottom:-40px;
+        left:50px;
+        width:20px;
+        height:30px;
+        border-style:solid;
+        border-width:0 10px 10px 0;
+        border-color:#5a8f00;
+        background:transparent;
+        /* css3 */
+        -webkit-border-bottom-right-radius:40px 50px;
+        -moz-border-radius-bottomright:40px 50px;
+        border-bottom-right-radius:40px 50px;
+        /* reduce the damage in FF3.0 */
+        display:block;
+    }
+
+    /* creates a small circle to produce a rounded point where the two curves meet */
+    .rectangle-speech-border > :first-child:before {
+        content:"";
+        position:absolute;
+        bottom:-40px;
+        left:45px;
+        width:10px;
+        height:10px;
+        background:#5a8f00;
+        /* css3 */
+        -webkit-border-radius:10px;
+        -moz-border-radius:10px;
+        border-radius:10px;
+    }
+
+    /* creates a white rectangle to cover part of the oval border*/
+    .rectangle-speech-border > :first-child:after {
+        content:"";
+        position:absolute;
+        bottom:-10px;
+        left:76px;
+        width:24px;
+        height:15px;
+        background:#fff;
+    }
+    /* ============================================================================================================================
+== OVAL THOUGHT BUBBLE (more CSS3)
+** ============================================================================================================================ */
+
+    .oval-thought {
+        position:relative;
+        width:270px;
+        padding:50px 40px;
+        margin:1em auto 80px;
+        text-align:center;
+        color:#fff;
+        background:#075698;
+        /* css3 */
+        background:-webkit-gradient(linear, 0 0, 0 100%, from(#2e88c4), to(#075698));
+        background:-moz-linear-gradient(#2e88c4, #075698);
+        background:-o-linear-gradient(#2e88c4, #075698);
+        background:linear-gradient(#2e88c4, #075698);
+        /*
+        NOTES:
+        -webkit-border-radius:220px 120px; // produces oval in safari 4 and chrome 4
+        -webkit-border-radius:220px / 120px; // produces oval in chrome 4 (again!) but not supported in safari 4
+        Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+        */
+        -webkit-border-top-left-radius:220px 120px;
+        -webkit-border-top-right-radius:220px 120px;
+        -webkit-border-bottom-right-radius:220px 120px;
+        -webkit-border-bottom-left-radius:220px 120px;
+        -moz-border-radius:220px / 120px;
+        border-radius:220px / 120px;
+    }
+
+    .oval-thought p {font-size:1.25em;}
+
+    /* creates the larger circle */
+    .oval-thought:before {
+        content:"";
+        position:absolute;
+        bottom:-20px;
+        left:50px;
+        width:30px;
+        height:30px;
+        background:#075698;
+        /* css3 */
+        -webkit-border-radius:30px;
+        -moz-border-radius:30px;
+        border-radius:30px;
+    }
+
+    /* creates the smaller circle */
+    .oval-thought:after {
+        content:"";
+        position:absolute;
+        bottom:-30px;
+        left:30px;
+        width:15px;
+        height:15px;
+        background:#075698;
+        /* css3 */
+        -webkit-border-radius:15px;
+        -moz-border-radius:15px;
+        border-radius:15px;
+    }
+
+</style>
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement( 'link' );
@@ -27,33 +176,63 @@
     <div class="slides">
         <section>
             <h1>DevOps</h1>
-            <h3>The HTML Presentation Framework</h3>
-            <p>
-                <small>Presentation by <a href="http://hakim.se">Satya Sudheer</a> / <a href="http://twitter.com/satya_sudheer">@satya_sudheer</a></small>
-            </p>
+            <!-- <h3>Communication, Collaboration, Integration & Automation </h3> -->
+            <h3>-- An IT mindset --</h3>
+            <blockquote>
+                If you’re not writing software to manage them, you’re not surviving.
+            </blockquote>
+            <!--<p>
+                <small>Presentation by <a href="http://sudheer.pw">Satya Sudheer</a> / <a href="http://twitter.com/satya_sudheer">@satya_sudheer</a></small>
+            </p> -->
         </section>
 
         <section>
-            <h2>Hello There</h2>
-            <p>
-                reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-            </p>
+            <h2>Agenda</h2>
+            <ul>
+                <li>
+                    Pre DevOps Days
+                </li>
+                <li>
+                    Little History
+                </li>
+                <li>
+                    Dev, Ops, CI, CD, DevOps Nirvana
+                </li>
+                <li>
+                    Tools, Culture, Stories, Everything Else
+                </li>
+            </ul>
         </section>
-        <section data-background="assets/DevVsOps.jpg">
-            <h1>Dev vs Ops</h1>
-
-        </section>
-        <section data-background="assets/PostDeployment.jpeg">
-            <h1>Dev vs Ops</h1>
-
-        </section>
-        <section data-background="assets/PostDeployment-Dev.jpg">
-            <h1>Dev vs Ops</h1>
-
-        </section>
-        <section data-background="assets/code_tdd.jpg">
-            <h1>Dev vs Ops</h1>
-
+        <section>
+            <section>
+                <h2>Pre-Agile/ Pre - DevOps Days</h2>
+                <ul>
+                    <li>Dev is often unaware of QA and Ops roadblocks that prevent the program from working as anticipated.</li>
+                    <li>
+                        QA and Ops are typically working across many features and have little context of the business purpose and value of the software.
+                    </li>
+                    <li>
+                        Each group has opposing goals that can lead to inefficiency and finger pointing when something goes wrong.
+                    </li>
+                </ul>
+            </section>
+            <section data-background="assets/dev-ops-post.jpg">
+                <h3 class="oval-thought">
+                    “It’s not my machines, it’s your code!”
+                </h3>
+                <h3 class="rectangle-speech-border">
+                    “It’s not my code, it’s your machines!”
+                </h3>
+            </section>
+            <section data-background="assets/PostDeployment-Dev.jpg">
+                <h1>Developers</h1>
+            </section>
+            <section data-background="assets/PostDeployment.jpeg">
+                <h1>Operations</h1>
+            </section>
+            <section data-background="assets/code_tdd.jpg">
+                <h1>Dev vs Ops</h1>
+            </section>
         </section>
     </div>
 </div>
