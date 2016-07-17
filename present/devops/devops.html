@@ -40,18 +40,11 @@
         <section>
             <h2>Agenda</h2>
             <ul>
-                <li>
-                    Pre-Agile/ Pre-DevOps Days
-                </li>
-                <li>
-                    Little History
-                </li>
-                <li>
-                    Dev, Ops, CI, CD, DevOps Nirvana
-                </li>
-                <li>
-                    Tools, Culture, Stories, Everything Else
-                </li>
+                <li>Context</li>
+                <li>Pre-Agile/ Pre-DevOps Days</li>
+                <li>Little History</li>
+                <li>Dev, Ops, CI, CD, DevOps Nirvana</li>
+                <li>Tools, Culture, Stories, Everything Else</li>
             </ul>
         </section>
         <section>
@@ -217,55 +210,77 @@
             </ul>
         </section>
         <section>
+
             <section>
-            <h2>Amazon, Google, Netflix..</h2>
-            <img src="assets/deployments.png"/>
-            <br/>
-            <p>
-                A bookstore in Seattle, deploys
-                code to production every 11 seconds… <i>2012</i>
-            </p>
-            <br/>
-            <h2>1 second</h2>
-            </section>
-            <section>
-                <h2>Netflix - Chaos Monkey</h2>
-                <img src="assets\chaos_monkey1.jpg"/>
+                <!--<h2>Amazon</h2>-->
+                <p>A bookstore in Seattle, deploys
+                    code to production every 11 seconds… <i>2012</i></p>
                 <br/>
+                <h2>1 second</h2>
             </section>
             <section>
                 <h2>Netflix - Simian Army</h2>
-                <blockquote>The Simian Army is a suite of tools for keeping your cloud operating in top form. Chaos Monkey, the first member, is a resiliency tool that helps ensure that your applications can tolerate random instance failures.</blockquote>
+                <!--<blockquote>The Simian Army is a suite of tools for keeping your cloud operating in top form. Chaos Monkey, the first member, is a resiliency tool that helps ensure that your applications can tolerate random instance failures.</blockquote>-->
+                <div style="float: left;padding-left:5px; padding-right: 10px;">
+                    <img src="assets/Simian.jpg" height="520px"/>
+                </div>
+                <div style="float: left; padding-left:25px; ">
+                    <ul>
+                        <li>Chaos Monkey </li>
+                        <li>Chaos Gorilla</li>
+                        <li>Chaos Kon</li>
+                        <li>Latency Monkey</li>
+                        <li>Conformity Monkey</li>
+                        <li>Security Monkey</li>
+                        <li>Doctor Monkey</li>
+                        <li>Janitor Monkey</li>
+                    </ul>
+                </div>
             </section>
-            <section data-background="assets/simian_army.jpg">
-                &nbsp;
-            </section>
+
+       <!--<section>
+              <ul>
+                  <li><b>Chaos Monkey - </b>randomly shuts down virtual machines (VMs) to ensure that small disruptions will not affect the overall service.</li>
+                  <li><b>Latency Monkey -</b> simulates a degradation of service and checks to make sure that upstream services react appropriately.</li>
+                  <li><b>Conformity Monkey -</b> detects instances that aren’t coded to best-practices and shuts them down, giving the service owner the opportunity to re-launch them properly.</li>
+              </ul>
+          </section>
+          <section>
+              <ul>
+                  <li><b>Security Monkey -</b> searches out security weaknesses, and ends the offending instances. It also ensures that SSL and DRM certificates are not expired or close to expiration.
+                  <li><b>Doctor Monkey -</b> performs health checks on each instance and monitors other external signs of process health such as CPU and memory usage.</li>
+                  <li><b>Janitor Monkey -</b> searches for unused resources and discards them.</li>
+              </ul>
+          </section>-->
             <section>
-                <ul>
-                    <li><b>Chaos Monkey - </b>randomly shuts down virtual machines (VMs) to ensure that small disruptions will not affect the overall service.</li>
-                    <li><b>Latency Monkey -</b> simulates a degradation of service and checks to make sure that upstream services react appropriately.</li>
-                    <li><b>Conformity Monkey -</b> detects instances that aren’t coded to best-practices and shuts them down, giving the service owner the opportunity to re-launch them properly.</li>
-                </ul>
-            </section>
-            <section>
-                <ul>
-                    <li><b>Security Monkey -</b> searches out security weaknesses, and ends the offending instances. It also ensures that SSL and DRM certificates are not expired or close to expiration.
-                    <li><b>Doctor Monkey -</b> performs health checks on each instance and monitors other external signs of process health such as CPU and memory usage.</li>
-                    <li><b>Janitor Monkey -</b> searches for unused resources and discards them.</li>
-                </ul>
+                <h2>Amazon, Google, Netflix..</h2>
+                <img src="assets/deployments.png"/>
             </section>
         </section>
         <section>
             <h2>DevOps Reading List</h2>
-            <ul>
-                <li>The Phoenix Project by Gene Kim, George Spafford, Kevin Behr</li>
-                <li>Web Operations</li>
-                <li>Continuous Delivery by Jez Humble and David Farley</li>
-                <li>A Practical Approach to Large-Scale Agile Development by Gary Gruver</li>
-                <li>The Practice of Cloud System Administration by  Tom Limoncelli, Strata Chalup, Christina Hogan</li>
-                <li>Release It! by Michael Nygard </li>
-                <li>Lean Software Development by Mary and Tom Poppendieck</li>
-            </ul>
+            <div style="align-content: center;">
+                <div style="clear: both;">
+                    <div style="width: 5px; height: 250px;float: left">&nbsp;</div>
+                    <div style="float: left"><img src="assets\books\tpp.jpg" style="height: 250px; width: 200px;"/></div>
+                    <div style="width: 5px; height: 250px;float: left">&nbsp;</div>
+                    <div style="float: left"><img src="assets\books\wo.jpg" style="height: 250px; width: 200px;"/></div>
+                    <div style="width: 5px; height: 250px;float: left">&nbsp;</div>
+                    <div style="float: left"><img src="assets\books\lsd.jpg" style="height: 250px; width: 200px;"/></div>
+                    <div style="width: 5px; height: 250px;float: left">&nbsp;</div>
+                    <div style="float: left"><img src="assets\books\ri.jpg" style="height: 250px; width: 200px;"/></div>
+                </div>
+                <div style="clear: both;">
+                    <div style="width: 5px; height: 250px;float: left">&nbsp;</div>
+                    <div style="float: left"><img src="assets\books\aplad.jpeg" style="height: 250px; width: 200px;"/></div>
+                    <div style="width: 5px; height: 250px;float: left">&nbsp;</div>
+                    <div style="float: left"><img src="assets\books\cd.jpg" style="height: 250px; width: 200px;"/></div>
+                    <div style="width: 5px; height: 250px;float: left">&nbsp;</div>
+                    <div style="float: left"><img src="assets\books\edo.jpg" style="height: 250px; width: 200px;"/></div>
+                    <div style="width: 5px; height: 250px;float: left">&nbsp;</div>
+                    <div style="float: left"><img src="assets\books\wido.jpg" style="height: 250px; width: 200px;"/></div>
+                </div>
+            </div>
         </section>
         <section>
             <h2>
