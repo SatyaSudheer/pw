@@ -1,0 +1,28 @@
+{
+  "name": "sudheerpw",
+  "version": "0.2.0",
+  "description": "sudheerpw",
+  "main": "index.html",
+  
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "engines": {
+    "node": "6.2.0",
+    "npm":"3.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/satyasudheer/pw"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "author": "Satya Sudheer",
+  "contributors": [
+    "Satya Sudheer <satya7sudheer@gmail.com> (http://sudheer.pw)"
+  ],
+  "license": "MIT"
+}
