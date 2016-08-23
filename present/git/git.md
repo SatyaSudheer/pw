@@ -28,5 +28,3 @@
 1. Tree — A tree object contains references to other blobs or subtrees.
 1. Commit — A commit object contains the reference to another tree object and some other information(author, committer etc.)
 1. Tag — A tag or a tag object is just another reference to a commit object and just makes for easier referencing.
-
----
