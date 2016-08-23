@@ -1,7 +1,3 @@
-# Git 101
-### Deckset has eight great ways to work with images
-
----
 ## Agenda
 1. Introduction
 1. What is a Distributed Version Control System?
