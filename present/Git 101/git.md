@@ -2,7 +2,7 @@
 ### Deckset has eight great ways to work with images
 
 ---
-# Agenda
+## Agenda
 1. Introduction
 1. What is a Distributed Version Control System?
 1. TFS vs Git (CVS vs DVS)
@@ -12,7 +12,7 @@
 1. Basic Git Workflows
 
 ---
-# Deep Dive into Git
+## Deep Dive into Git
 
 1. What is a Distributed Version Control System?
 1. The Git Repository
@@ -23,25 +23,14 @@
 
 ---
 
-<br>
-<br>
-<br>
-# Introduction [^.]
-
+## Introduction
 ![](assets/intro.jpg)
-
-<br>
-<br>
-<br>
-
-[^.]: Image Credit: [Aron Van de Pol] (https://unsplash.com/photos/hXOGHaGCtdA)
-
 ---
 1. What happens when you run $ git init
  
----
+--
 
-# Contents of .git folder
+## Contents of .git folder
 
 1. Blob — A blob object is used for storing the contents of a single file.
 1. Tree — A tree object contains references to other blobs or subtrees.
@@ -50,14 +39,5 @@
 
 ---
 
-`footer: © Unsigned Integer UG, 2014`
-`slidenumbers: true`
-
-# Footers and Slide Numbers
-
-Include persistent custom footers and/or running slide numbers by inserting the following directives at the *very top* of your file: 
-
-Make sure that there are *no empty lines* between the two.
----
 # Q&A
 ## Thank You :)
