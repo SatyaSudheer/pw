@@ -34,11 +34,124 @@
         <section data-markdown="git.md" data-separator="^---" data-separator-vertical="^--">
 
         </section>
+
+        <section>
+            <h2>Agenda</h2>
+            <ul>
+                <li>What is a Distributed Version Control System?</li>
+                <li>The Git Repository (Nuts & Bolts)</li>
+                <li>Git Basic Commands</li>
+                <li>History, Commits, Merging, Fast-Forward Merges, Rebase, Everything</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Advanced Git</h2>
+            <ul>
+                <li>Commit by hand (repo internals)</li>
+                <li>Rebase</li>
+                <li>Interactive Rebase</li>
+                <li>Rebase on Pull</li>
+                <li>External diff tools</li>
+                <li>Advanced logging</li>
+                <li>Reflog</li>
+                <li>Reset</li>
+            </ul>
+        </section>
+        <section>
+            <section>
+                <h2>What is a Distributed Version Control System?</h2>
+            </section>
+            <section>
+                <h2>How Git is different from TFS?</h2>
+                <img src="assets/Modern%20VCS.png"/>
+                <small>Source: Microsoft Build</small>
+            </section>
+            <section>
+                <h2>Git in VS</h2>
+                <img src="assets/git-in-vs.png">
+                <small>Source: Microsoft Build</small>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>The Git Repository (Nuts & Bolts)</h2>
+            </section>
+            <section>
+                <h2>History</h2>
+            </section>
+            <section>
+                <h2>Commits</h2>
+            </section>
+            <section>
+                <h2>Branches</h2>
+            </section>
+            <section>
+                <h2>Merges</h2>
+            </section>
+            <section>
+                <h2>Rebase</h2>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Working Directory</h2>
+            </section>
+            <section>
+                <h2>Contents of .git folder</h2>
+                <ul>
+                    <li><b>Blob</b> — A blob object is used for storing the contents of a single file.</li>
+                    <li><b>Tree</b> — A tree object contains references to other blobs or subtrees.</li>
+                    <li><b>Commit</b> — A commit object contains the reference to another tree object and some other information(author, committer etc.)</li>
+                    <li><b>Tag</b> — A tag or a tag object is just another reference to a commit object and just makes for easier referencing.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>How Objects, Branches are Stored!</h2>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Git Basic Workflow</h2>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Git Basic Commands</h2>
+            </section>
+        </section>
+        <section>
+            <h2>References</h2>
+        </section>
         <section>
                 <h2>Thank You</h2>
         </section>
     </div>
 </div>
+<script src="../reveal/lib/js/head.min.js"></script>
+<script src="../reveal/js/reveal.js"></script>
 
+<script>
+
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            { src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '../reveal/plugin/zoom-js/zoom.js', async: true },
+            { src: '../reveal/plugin/notes/notes.js', async: true }
+        ]
+    });
+
+</script>
 </body>
 </html>
