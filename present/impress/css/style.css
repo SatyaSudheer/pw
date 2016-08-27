@@ -131,6 +131,15 @@ blockquote .author {
 #combo-fluid-fixed div .light { font-size: 50px; width: 100%; }
 #combo-fluid .light { letter-spacing: 3px; }
 
+#conflict-text { font-size: 247px; }
+#conflict-or { position: relative; left: -20px; }
+#conflict-fluid-fixed div { float: left; text-align: center; }
+#conflict-plus { width: 10%; font-size: 100px; float: left;}
+#conflict-fixed, #conflict-fluid { width: 40%; float: left; }
+#conflict-fluid-fixed div .bold { font-size: 63px; width: 100%; }
+#conflict-fluid-fixed div .light { font-size: 50px; width: 100%; }
+#conflict-fluid .light { letter-spacing: 3px; }
+
 #why-sml { letter-spacing: 19px; font-size: 37px; position: relative; left: 10px; }
 #why-one-site { font-size: 200px; }
 #why-every { font-size: 94px; }

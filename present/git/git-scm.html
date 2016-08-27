@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="Git - Nuts n Bolts" />
+    <meta name="author" content="Satya Sudheer" />
+    <title>Git - Nuts n Bolts</title>
+    <link href="../impress/css/normalize.css" rel="stylesheet"/>
+    <link href="../impress/css/impress.css" rel="stylesheet"/>
+    <link href="../impress/css/style.css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<div class="background"></div>
+<div id="impress">
+    <div id="title" class="step" data-x="540" data-y="600" data-scale="4.5">
+        <img src="assets/git-title.png" height="80" />
+        <div class="big bold">
+            <div id="title-text1">Nuts n Bolts of</div>
+            <div id="title-text2">Git In Next</div>
+            <div id="title-text3">90 Mins..</div>
+        </div>
+    </div>
+    <div id="respond" class="step" data-x="2650" data-y="-290" data-scale="1">
+        <img src="assets/dvcs.png" height="400" />
+        <div class="big bold">
+            <div id="respond-text1">Distributed</div>
+            <div id="respond-text2">Version</div>
+            <div id="respond-text3">Control System</div>
+        </div>
+    </div>
+    <div id="easy-share-offline" class="step" data-x="2650" data-y="320" data-scale="1">
+        <div class="big bold">
+            <div id="ar-adaptive" style="font-size: 170px;">Meet SHA1</div>
+            <div id="ar-adaptive-fixed" style="font-size: 45px;">(Every Object in Git has its own hash)</div>
+            <span>and</span>
+            <div id="ar-responsive">integrity</div>
+            <div id="ar-responsive-fluid">(No Accidental Corruption)</div>
+        </div>
+        <!--<img src="assets/hash.gif"/>-->
+    </div>
+    <div id="combo" class="step" data-x="2650" data-y="790" data-scale="1">
+        <div class="big bold">
+            <span id="combo-or">Commands</span>
+           <div id="combo-text">$ Git</div>
+        </div>
+        <div id="combo-fluid-fixed" style="padding-top: 24px;">
+            <div id="combo-fluid" class="big">
+                <div class="bold">Porcelain Commands</div>
+                <div class="light" style="font-size: 30px; padding-top: 8px;">init, add, commit</div>
+                <div class="light" style="font-size: 30px; padding-top: 8px;">fetch, push, pull</div>
+                <div class="light" style="font-size: 30px; padding-top: 8px;">merge, rebase</div>
+                <div class="light" style="font-size: 30px; padding-top: 8px;">--</div>
+            </div>
+            <div id="combo-plus">+</div>
+            <div id="combo-fixed" class="big">
+                <div class="bold">Plumbing Commands</div>
+                <div class="light" style="font-size: 30px; padding-top: 8px;">hash-object</div>
+                <div class="light" style="font-size: 30px; padding-top: 8px;">cat-file</div>
+                <div class="light" style="font-size: 30px; padding-top: 8px;">count-objects</div>
+                <div class="light" style="font-size: 30px; padding-top: 8px;">--</div>
+            </div>
+        </div>
+    </div>
+    <!--<div id="combo" class="step" data-x="2650" data-y="900" data-scale="1">
+        <div class="big bold">
+            <span id="combo-or">Commands</span>
+            <div id="combo-text">Git</div>
+        </div>
+        <div id="combo-fluid-fixed">
+            <div id="combo-fluid" class="big">
+                <div class="bold">Porcelain Commands</div>
+                <div class="light">.git_config</div>
+            </div>
+            <div id="combo-plus">+</div>
+            <div id="combo-fixed" class="big">
+                <div class="bold">Plumbing Commands</div>
+                <div class="light">.git/config</div>
+            </div>
+        </div>
+    </div>
+    <div id="why" class="step" data-x="-1700" data-y="900" data-scale="1">
+        <div class="big bold title">Why</div>
+    </div>
+    <div id="why-quote" class="step" data-x="-1700" data-y="1250" data-scale="1">
+        <blockquote>
+            Traditional version control helps you backup, track and synchronize files. Distributed version control makes it easy to share changes. Done right, you can get the best of both worlds: simple merging and centralized releases.
+        </blockquote>
+    </div>-->
+    <div id="config" class="step" data-x="-1700" data-y="1350" data-scale="1">
+        <div class="big light" id="why-sml">System + Global + Local</div>
+        <div class="big bold" id="why-one-site">Config.</div>
+        <div class="big bold" id="why-every">For Source Control Management</div>
+    </div>
+    <div id="gitignore" class="step" data-x="-1700" data-y="1650" data-scale="1">
+        <div class="big bold">Few More Config.</div>
+        <div class="big bold" style="font-size: 150px;">.gitignore</div>
+       <div class="big bold" style="font-size: 90px;">.gitattributes</div>
+    </div>
+    <div id="repo" class="step" data-x="-660" data-y="1350" data-scale="1" style="text-align: left;">
+        <div class="big bold title" style="font-size: 130px;">Repository</div>
+        <blockquote>A repository is a collection of commits, each of which is an archive of what the project's working tree looked like at a past date, whether on your machine or someone else's.</blockquote>
+    </div>
+    <div id="objectmodel" class="step" data-x="-660" data-y="1650" data-scale="1" style="text-align: left;">
+        <img src="assets/gom.png" height="250px"/>
+        <div class="big bold title" style="font-size: 80px;">Git Object Model</div>
+        <div class="light" style="padding-top: 18px;">Blobs&nbsp; - &nbsp; Trees&nbsp; - &nbsp;Commits &nbsp; - &nbsp;Tags </div>
+    </div>
+    <div id="commit" class="step" data-x="-660" data-y="1950" data-scale="1" style="text-align: left;">
+        <div class="big bold title" style="font-size: 130px;">Commit</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">Anatomy of a Commit</div>
+    </div>
+   <!-- <div id="history" class="step" data-x="-660" data-y="2050" data-scale="1">
+        <div class="big bold title" style="font-size: 130px;">History</div>
+        <blockquote>DVCS represent history in a Directed Acyclic Graph (DAG) or simply, a graph.</blockquote>
+    </div> -->
+    <div id="branch" class="step" data-x="420" data-y="1350" data-scale="1">
+        <div class="big bold title" style="font-size: 130px;">Branching</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">Branches in a Nutshell</div>
+        <img src="assets/branch.png" height="267px"/>
+    </div>
+    <div id="conflict" class="step" data-x="420" data-y="1650" data-scale="1">
+        <div class="big bold title" style="font-size: 80px;">Conflict Resolution</div>
+        <div id="conflict-fluid" class="big" style="padding-top: 25px;">
+            <div class="bold">Merging</div>
+        </div>
+        <div id="conflict-plus">+</div>
+        <div id="conflict-fixed" class="big" style="padding-top: 25px;">
+            <div class="bold">Rebasing</div>
+        </div>
+    </div>
+    <div id="remotes" class="step" data-x="1250" data-y="1350" data-scale="1">
+        <div class="big bold title" style="font-size: 130px;">Remotes</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">Sharing and Updating Projects</div>
+    </div>
+    <!--<div id="rebase" class="step" data-x="420" data-y="1950" data-scale="1">
+        <div class="big bold title" style="font-size: 130px;">Rebasing</div>
+    </div>-->
+    <script src="../impress/js/impress.js"></script>
+    <script src="../impress-console/js/impressConsole.js"></script>
+    <script>
+        impress().init();
+        impressConsole().init(css="css/impressConsole.css");
+        //impressConsole().open(); // If you want them to open automatically
+    </script>
+</div>
+</body>
+</html>
