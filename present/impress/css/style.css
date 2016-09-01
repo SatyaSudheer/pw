@@ -115,9 +115,11 @@ blockquote .author {
 #distributed-text3 { font-size: 77px; }
 
 #meet-git { font-size: 192px; }
-#meet-git`-fixed { font-size: 54px; }
+#meet-git-fixed { font-size: 54px; }
 #git-known { font-size: 153px; }
 #git-known-fluid { font-size: 57px; }
+
+#protocols-list-fluid { font-size: 57px; }
 
 #meet-sha1 { font-size: 192px; }
 #meet-sha1-fixed { font-size: 54px; }
