@@ -123,6 +123,7 @@
       </div>-->
     <div id="work" class="step" data-x="-700" data-y="1350" data-scale="1"><img src="../gif-assets/animat-chop-wood-color.gif" height="180px"/><div class="big bold title" style="font-size: 200px">Work</div></div>
     <div id="repo" class="step" data-x="-700" data-y="1650" data-scale="1">
+
         <div class="big bold title" style="font-size: 130px;">Repository</div>
         <div class="light" style="font-size: 30px; padding-top: 8px;">git init</div>
     </div>
@@ -135,11 +136,22 @@
         <div class="big bold title" style="font-size: 110px;">Commit</div>
         <div class="light" style="font-size: 30px; padding-top: 8px;">git commit</div>
     </div>
-    <div id="history" class="step" data-x="-700" data-y="1950" data-scale="1">
+    <div id="vcommits" class="step" data-x="-900" data-y="1930" data-scale=".60">
+        <div class="light" style="font-size: 30px; padding-top: 8px;">Viewing</div>
+        <div class="big bold title" style="font-size: 110px;">Snapshots</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">git log - git show - git diff - git checkout</div>
+    </div>
+    <div id="reflog" class="step" data-x="-480" data-y="1930" data-scale=".60">
+        <div class="light" style="font-size: 30px; padding-top: 8px;">pronounced “ref-log”, not “re-flog”</div>
+        <div class="big bold title" style="font-size: 110px;">REFLOG</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">git reflog</div>
+    </div>
+    <div id="history" class="step" data-x="-700" data-y="2150" data-scale="1">
         <div class="light" style="font-size: 30px; padding-top: 8px;">Directed Acyclic Graph (DAG)</div>
         <div class="big bold title" style="font-size: 130px;">History</div>
-        <div class="light" style="font-size: 30px; padding-top: 8px;">git log</div>
+        <img src="assets/sch.png" height="200"/>
     </div>
+
     <div id="share" class="step" data-x="220" data-y="1350" data-scale="1"><img src="../gif-assets/animat-rocket-color.gif" height="180px"/><div class="big bold title" style="font-size: 200px">Team</div></div>
     <div id="collaboration" class="step" data-x="220" data-y="1650" data-scale="1">
         <div class="light" style="font-size: 30px; padding-top: 8px;">In a Nutshell</div>
@@ -157,46 +169,73 @@
         </div>
         <div class="big bold title" style="font-size: 80px; clear:both;">Conflict Resolution</div>
     </div>
-    <div id="remotes" class="step" data-x="220" data-y="2130" data-scale="1">
+    <div id="remotes" class="step" data-x="-50" data-y="2130" data-scale=".60">
         <div class="big bold title" style="font-size: 130px;">Remotes</div>
         <!--<div class="light" style="font-size: 30px; padding-top: 8px; padding-bottom: 8px;">Sharing and Updating Projects</div>-->
         <div class="light" style="padding-top: 18px;">Clone-Fetch-Pull-Push</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">git remote add {URL}</div>
     </div>
-
+    <div id="hooks" class="step" data-x="420" data-y="2130" data-scale=".60">
+        <div class="big bold title" style="font-size: 130px;">Hooks</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">.git/hooks</div>
+        <div class="light" style="font-size: 18px; padding-top: 8px;">pre-commit, pre-push, pre-rebase,</div>
+        <div class="light" style="font-size: 18px; padding-top: 8px;">prepare-commit-message, etc</div>
+    </div>
     <div id="clean" class="step" data-x="1050" data-y="1350" data-scale="1"><img src="../gif-assets/animat-customize-color.gif" height="180px"/><div class="big bold title" style="font-size: 200px">Clean</div></div>
     <div id="reset" class="step" data-x="1050" data-y="1650" data-scale="1">
         <div class="light" style="font-size: 30px; padding-top: 8px;">Resets are like checkouts</div>
         <div class="big bold title" style="font-size: 150px;">Reset</div>
         <div class="light" style="font-size: 30px; padding-top: 8px;">hard, mixed, soft</div>
-        <div class="light" style="font-size: 30px; padding-top: 8px;">Un-Stage, Un-Commit</div>
     </div>
-    <div id="stash" class="step" data-x="1050" data-y="1850" data-scale="1">
+    <div id="undoindex" class="step" data-x="950" data-y="1800" data-scale=".40">
+        <div class="light" style="font-size: 30px; padding-top: 8px;">Undo</div>
+        <div class="big bold title" style="font-size: 130px;">Index</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">git reset</div>
+    </div>
+    <div id="undostage" class="step" data-x="1200" data-y="1800" data-scale=".40">
+        <div class="light" style="font-size: 30px; padding-top: 8px;">Undo</div>
+        <div class="big bold title" style="font-size: 130px;">Staged</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">git reset --hard</div>
+    </div>
+    <div id="undocommit" class="step" data-x="1050" data-y="1900" data-scale=".6">
+        <div class="light" style="font-size: 30px; padding-top: 8px;">Undo</div>
+        <div class="big bold title" style="font-size: 130px;">Commit</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">git reset HEAD</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">git revert {commit id}</div>
+    </div>
+    <div id="stash" class="step" data-x="850" data-y="2000" data-scale=".40">
         <div class="big bold title" style="font-size: 130px;">Stash</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">git stash</div>
     </div>
-    <div id="gc" class="step" data-x="1050" data-y="2050" data-scale="1">
-        <div class="big bold title" style="font-size: 130px;">Garbage Collection</div>
+    <div id="bisect" class="step" data-x="1050" data-y="2000" data-scale=".40">
+        <div class="big bold title" style="font-size: 130px;">Bisect</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">git bisect</div>
+    </div>
+    <div id="blame" class="step" data-x="1250" data-y="2000" data-scale=".40">
+        <div class="big bold title" style="font-size: 130px;">Blame</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">git blame</div>
+    </div>
+    <div id="cp" class="step" data-x="1050" data-y="2080" data-scale=".75">
+        <div class="big bold title" style="font-size: 110px;">Cherry-Pick</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">git cherry-pick {ref}</div>
+    </div>
+    <div id="gc" class="step" data-x="1050" data-y="2230" data-scale=".75">
+        <div class="big bold title" style="font-size: 110px;">Garbage Collection</div>
         <div class="light" style="font-size: 30px; padding-top: 8px;">dangling object</div>
     </div>
     <div id="github" class="step" data-x="1850" data-y="1350" data-scale="1"><img src="../gif-assets/animat-tent-color.gif" height="180px"/><div class="big bold title" style="font-size: 200px">gitHub</div></div>
-   <!-- <div id="github" class="step" data-x="1850" data-y="1650" data-scale="1">
-        <div class="big bold title" style="font-size: 130px;">Github</div>
-        <div class="light" style="font-size: 30px; padding-top: 8px;">Cloud Hosting Projects</div>
-    </div>-->
     <div id="Org" class="step" data-x="1850" data-y="1650" data-scale="1">
         <div class="big bold title" style="font-size: 110px;">Organization</div>
         <div class="light" style="font-size: 30px; padding-top: 8px;">Teams-Projects-Everything</div>
     </div>
-    <div id="fork" class="step" data-x="1850" data-y="1800" data-scale="1">
+    <div id="grepo" class="step" data-x="1850" data-y="1850" data-scale="1">
+        <div class="big bold title" style="font-size: 130px;">Repo</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">on GitHub</div>
+        <div class="light" style="padding-top: 18px;">Code-Issues-Wiki-Stats</div>
+    </div>
+    <div id="fork" class="step" data-x="1850" data-y="2050" data-scale="1">
         <div class="big bold title" style="font-size: 130px;">Fork</div>
-        <div class="light" style="font-size: 30px; padding-top: 8px;">Upstream</div>
-    </div>
-    <div id="pull" class="step" data-x="1850" data-y="1950" data-scale="1">
-        <div class="big bold title" style="font-size: 130px;">Pull Req.</div>
-       <!-- <div class="light" style="font-size: 30px; padding-top: 8px;">Upstream</div>-->
-    </div>
-    <div id="pull" class="step" data-x="1850" data-y="2100" data-scale="1">
-        <div class="big bold title" style="font-size: 130px;">Wiki</div>
-        <div class="light" style="font-size: 30px; padding-top: 8px;">Markdown-ascii-etc</div>
+        <div class="light" style="font-size: 30px; padding-top: 8px;">Upstream - Pull Req.</div>
     </div>
     <div id="gitvs" class="step" data-x="2750" data-y="1350" data-scale="1"><img src="../gif-assets/animat-swiss-knife-color.gif" height="180px"/><div class="big bold title" style="font-size: 200px">Plugin</div></div>
     <div id="magic" class="step" data-x="2750" data-y="1650" data-scale="1">
