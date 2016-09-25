@@ -9,6 +9,21 @@
     <title>Jenkins</title>
 </head>
 <body>
-
+<article id="presentation">
+    <section>Slide 1</section>
+    <section>Slide 2</section>
+    <section>Slide 3</section>
+</article>
+<script type="text/javascript">
+    var deck = bespoke.from('#presentation');
+    // Next slide
+    deck.next();
+    // Previous slide
+    deck.prev();
+    // Go to a specific slide
+    deck.slide(0);
+    // Get the active slide index
+    deck.slide(); // 0
+</script>
 </body>
 </html>
