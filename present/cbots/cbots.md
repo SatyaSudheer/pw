@@ -1,6 +1,6 @@
 
 # Chatbots
-
+## - - -
 ---
 
 # Chatbot
@@ -29,7 +29,9 @@ A computer program designed to simulate conversation with human users, especiall
 
 It could be any number of things, ranging from functional to fun.
 
-*Powered by rules and sometimes artificial intelligence, that you interact with via a chat interface*
+*Powered by rules and sometimes artificial intelligence, that you interact with via a chat interface* [^1]
+
+[^1]: http://bit.ly/2d6lPv8
 
 ---
 ![](assets/usecase.jpg)
@@ -42,9 +44,10 @@ It could be any number of things, ranging from functional to fun.
 
 # M. V. P
 - Content (FAQ)
+- Database (XML/Excel/MongoDB)
 - Restful Service (Capable of serving images/text, etc.)
 - Cloud (AWS Lambda/Azure Functions)
-- SDK Integration (Facebook)
+- Messenger Platform (Facebook)
 
 ---
 ![](assets/q.jpg)
@@ -63,9 +66,6 @@ It could be any number of things, ranging from functional to fun.
 2 - https://www.pexels.com/photo/black-android-smartphone-177707/
 3 - https://www.pexels.com/photo/map-maps-x-camera-34020/
 4 - https://www.pexels.com/photo/fashion-men-colorful-hipster-6805/
-
----
-
 5 - https://www.pexels.com/photo/working-art-crafting-handcrafted-29964/
 6 - https://www.pexels.com/photo/food-man-person-eating-2261/
 
