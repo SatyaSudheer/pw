@@ -60,12 +60,16 @@ It could be any number of things, ranging from functional to fun.
 ### Keep Exploring. 
 
 ---
+
 # Image Credits
 
 1 - https://www.dropbox.com/s/en9t0dmeanbi2du/188H.jpg?dl=1
 2 - https://www.pexels.com/photo/black-android-smartphone-177707/
 3 - https://www.pexels.com/photo/map-maps-x-camera-34020/
 4 - https://www.pexels.com/photo/fashion-men-colorful-hipster-6805/
+
+---
+
 5 - https://www.pexels.com/photo/working-art-crafting-handcrafted-29964/
 6 - https://www.pexels.com/photo/food-man-person-eating-2261/
 
