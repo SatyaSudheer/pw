@@ -29,7 +29,7 @@ The danger occurs when the debt is not repaid. Every minute spent on code that i
 # [fit] Technical Debt is Good
 
 ---
-# [fit] What qualifies for Tech Debt
+# What qualifies for Tech Debt
 - Is the code clean?
 - Is the code tested?
 - Is there a learning objective or event?
