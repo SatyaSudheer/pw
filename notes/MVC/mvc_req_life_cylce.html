@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title>mvc_req_life_cylce</title>
+	</head>
+<body>
+<h1>MVC</h1>
+
+<h2>MVC &amp; ASP.NET</h2>
+
+<figure><img src="assets/MVC-ASPNET.png" alt="MVC &amp; ASP.NET Relation"/><figcaption>MVC &amp; ASP.NET Relation</figcaption></figure>
+
+<h2>MVC &amp; Webfroms Request Life Cycle</h2>
+
+<figure><img src="assets/mvc-asp-req-lc.png" alt="MVC - Webforms"/><figcaption>MVC - Webforms</figcaption></figure>
+
+<ul>
+	<li>Webforms 
+
+		<ul>
+			<li>Points to Physical aspx file</li>
+			<li>HTTPHandler (IHTTPHandler)</li>
+		</ul></li>
+	<li>MVC 
+
+		<ul>
+			<li>Points to a Controller Action Method </li>
+			<li>HTTPHandler (MVCHandler)</li>
+		</ul></li>
+</ul>
+
+<h2>HTTPHandler</h2>
+
+<ul>
+	<li>MVC</li>
+	<li>Webforms</li>
+</ul>
+
+<h2>MVC</h2>
+
+<ul>
+	<li>Controllers</li>
+	<li>Action Methods</li>
+	<li>Models</li>
+	<li>Filters</li>
+	<li>Views</li>
+</ul>
+
+<h1>MVC Life Cycles</h1>
+
+<ul>
+	<li>Application Life Cycle</li>
+	<li>Request Life Cycle</li>
+</ul>
+
+<figure><img src="assets/MVC-Life-Cycles.png" alt="MVC Life Cylces"/><figcaption>MVC Life Cylces</figcaption></figure>
+
+<h2>MVC Application Life Cycle</h2>
+
+<h2>MVC Request Life Cycle</h2>
+
+<figure><img src="assets/MVCReqLC.png" alt="MVC Request Life Cycle"/><figcaption>MVC Request Life Cycle</figcaption></figure>
+
+<h1>The Application and Request Life Cycle Events</h1>
+
+<h2>The Life of an Application</h2>
+
+<blockquote>
+<p>MVCApplication derived from HTTPApplication </p>
+</blockquote>
+
+<ul>
+	<li>ApplicationStart</li>
+	<li>BeginRequest</li>
+	<li>AuthenticateRequest</li>
+	<li>AuthorizeRequest</li>
+	<li>ResolveRequestCache [URL Routing Module]</li>
+	<li>MapRequestHandler</li>
+	<li>AcquireRequestState</li>
+	<li>RequestHandlerExecute [MVC generate response]</li>
+	<li>UpdateRequestCache</li>
+	<li>LogRequest</li>
+	<li>EndRequest</li>
+	<li>ApplicationEnd</li>
+</ul>
+
+<p><em>Event names shows represent both pre &amp; post versions</em></p>
+
+<h3>ApplicationStart</h3>
+
+<blockquote>
+<p>An event that fires when first request is received, can be used to run intial configuration code.</p>
+</blockquote>
+
+<ul>
+	<li>Registering Areas</li>
+	<li>Registering Global Filters (GlobalFilters)</li>
+	<li>Registering Routes (RoutesTable)</li>
+	<li>Registering Bundles (BundleTable)</li>
+</ul>
+
+<h3>ApplicationEnd</h3>
+
+<blockquote>
+<p>An event that fires when an application ends, not a great option for handling errors.</p>
+</blockquote>
+
+<h3>PreApplicationStart</h3>
+
+<blockquote>
+<p>Another option for running intial configuraiton code, applied through an attribute, often used to register HTTPModules.</p>
+</blockquote>
+
+<p>e.g: [assembly: PreApplicationStartMethod(typeof(MVCApplication), &quot;Register&quot;)]</p>
+
+<h2>HTTPHandler</h2>
+
+<blockquote>
+<p>Classes that implements IHTTPHandler and generate a response to an HTTPRequest.</p>
+</blockquote>
+
+<h3>HTTPHandlers and the Request Life Cycle</h3>
+
+<ul>
+	<li>MapRequestHandler </li>
+	<li>PostMapRequestHandler</li>
+	<li>RequestHandlerExecute</li>
+	<li>PostRequestHandlerExecute</li>
+</ul>
+
+<h2>HTTPModules</h2>
+
+<blockquote>
+<p>Classes that implements IHTTPModule and are designed to respond to Life Cycle Events.</p>
+</blockquote>
+
+<h2>HTTPModules and HTTPContext</h2>
+
+<blockquote>
+<p>HTTPModules can help us in pouplating HTTPContext properties, for example Authentation module will help in populating the user property details on HTTPContext.</p>
+</blockquote>
+
+<figure><img src="assets/HM-HC.png" alt="HTTPModules - HTTPContext Playing together"/><figcaption>HTTPModules - HTTPContext Playing together</figcaption></figure>
+
+<h2>The MvcRoutehandler and MvcHandler</h2>
+
+<blockquote>
+<p>UrlRoutingModule (excutes at PostResolveRequestCache)</p>
+</blockquote>
+
+<ul>
+	<li>Match Url to Route defined in MVC app </li>
+	<li>Get the Routes MvcRoutehandler</li>
+	<li>Call GetHttpHander on MvcRoutehandler</li>
+	<li>Call ProcessRequest on returned MvcHandler</li>
+</ul>
+
+<h2>Understanding Controllers Intialization</h2>
+
+<ul>
+	<li>MvcHandler retrieves a controller from the ControllerFactory</li>
+	<li>MvcHandler calls the Execute() method of the acquired Controller. </li>
+	<li>The DefaultControllerFactory can use a Dependency Resovler to acquire controller instances.</li>
+	<li>The Depenedency Resolver is extensible. </li>
+</ul>
+
+<h3>Controllers and the Request Life Cycle</h3>
+
+<blockquote>
+<p>Controllers are the most important classes of MVC, Controllers are resposible for orchestrate the relationship of models &amp; views. At the low level controllers are nothing but a class which implements IController with one generic method Execute().</p>
+</blockquote>
+
+<ul>
+	<li>Controller:IController</li>
+</ul>
+
+<h3>Controller Intialization</h3>
+
+<figure><img src="assets/CI.png" alt="Controller Intialization"/><figcaption>Controller Intialization</figcaption></figure>
+
+<ul>
+	<li>ProcessRequestInit() - via Controller Factory it will resolve the required controller class. </li>
+	<li>Controller Activator will help us in initiating the selected controller. </li>
+	<li>Depenedency Resolver will do the required wrt dependency injection. </li>
+	<li>Controller.Execute()</li>
+</ul>
+
+<h3>The Controller Factory</h3>
+
+<blockquote>
+<p>IControllerFactory Interface</p>
+</blockquote>
+
+<ul>
+	<li>CreateController </li>
+	<li>GetControllerSessionStateBehavior</li>
+	<li>ReleaseController</li>
+</ul>
+
+<h3>Depenedency Resolver</h3>
+
+<blockquote>
+<p>Implements IDependencyResolver</p>
+</blockquote>
+
+<ul>
+	<li>GetService</li>
+	<li>GetServices</li>
+</ul>
+
+<h2>Action Method Execution</h2>
+
+<figure><img src="assets/Action-Method-Exec.jpg" alt="Action Method Execution Process"/><figcaption>Action Method Execution Process</figcaption></figure>
+
+<blockquote>
+<p>Controller Execute() - will hands off to Action Invoker</p>
+</blockquote>
+
+<ul>
+	<li>Action Invoker Selects Method (Using route data and method names)</li>
+	<li>Authentation Filters (Failure will challenge via a login module)</li>
+	<li>Authorization Filters (Failure will challenge via a login module)</li>
+	<li>Model Binding</li>
+	<li>Action Filters (OnActionExecuting)</li>
+	<li>Action Method</li>
+	<li>Action Filters (OnActionExecuted)</li>
+</ul>
+
+<h3>The Action Invoker</h3>
+
+<blockquote>
+<p>Action Invoker is used by the controller to identify &amp; excute the appropriate method. </p>
+</blockquote>
+
+<ul>
+	<li>IActionInvoker 
+
+		<ul>
+			<li>InvokeAction</li>
+		</ul></li>
+	<li>MVC Frameowrk provides the powerful ControllerActionInvoker</li>
+	<li>Can customize default behavior using extension points.</li>
+</ul>
+
+<h3>Action Method Selectors</h3>
+
+<blockquote>
+<p>Action Method Selectors </p>
+</blockquote>
+
+<ul>
+	<li>Do any valid method signatures match the current Action name?
+
+		<ul>
+			<li>No - Error - No Match</li>
+			<li>Yes, only one - Select that one</li>
+			<li>Yes, Multiple. Remove any methods with a selector that returns false. - Are there any valid candidates left?
+
+				<p>-No - Error - No Match</p>
+
+				<ul>
+					<li>Yes, One - Select That One </li>
+					<li>Yes, Multiple - Does one and only one of them have an action Selector 
+
+						<ul>
+							<li>Yes - Select That One</li>
+							<li>No - Error - Ambigous Match </li>
+						</ul></li>
+				</ul></li>
+		</ul></li>
+</ul>
+
+<figure><img src="assets/ActionMethodSelection.jpg" alt="ActionMethodSelection"/><figcaption>ActionMethodSelection</figcaption></figure>
+
+<h3>Common Action Selectors:</h3>
+
+<ul>
+	<li>HttpGet</li>
+	<li>HttpPost</li>
+	<li>AcceptVerbs</li>
+	<li>ActionName</li>
+	<li>NonAction</li>
+	<li>Custom</li>
+</ul>
+
+<h2>The Model Binding Process</h2>
+
+<blockquote>
+<p>Model Binder populates Action Method Parameters from the Action Invoker by taking the help of Value Providers. Implements IModelBinder - BindModel </p>
+</blockquote>
+
+<h3>Capture required details from &quot;Value Providers&quot;:</h3>
+
+<ul>
+	<li>From Data</li>
+	<li>Route Data </li>
+	<li>Query String</li>
+	<li>Files </li>
+	<li>Custom - Cookies, Browser, etc.</li>
+</ul>
+
+<h2>Working with MVC Filters</h2>
+
+<blockquote>
+<p>Designed to inject misc. logic into the life Cycle</p>
+</blockquote>
+
+<h3>Filter Types:</h3>
+
+<ul>
+	<li>Authentation Filters Implements IAuthenticationFilter</li>
+	<li>Authorization Filters Implements IAuthorizationFilter</li>
+	<li>Action Filters Implements IActionFilter</li>
+	<li>Result Filters Implements IResultFilter</li>
+	<li>Exception Filters Implements IExceptionFilter </li>
+</ul>
+
+<h3>Understanding Filter Scope</h3>
+
+<ul>
+	<li>Action Method Scope: Filter -&gt; Action Method -&gt; Filter</li>
+	<li>Controller Scope: Filter -&gt; Specific Controller -&gt; Filter </li>
+	<li>Global Scope: Filter -&gt; Every Controller -&gt; Filter</li>
+</ul>
+
+<h3>The Filter Execution Order</h3>
+
+<ul>
+	<li>OnActionExecuting will obey the ascending order</li>
+	<li>OnActionExecuted will obey the descending order </li>
+</ul>
+
+<h2>Action Results and the Life Cycle</h2>
+
+<h3>The Action Result Execution Process</h3>
+
+<blockquote>
+<p>Action Invoker</p>
+</blockquote>
+
+<ul>
+	<li>Result Filters - OnResultExecuting</li>
+	<li>Action Result - ExecuteResult()
+
+		<ul>
+			<li>View &amp; PartialViewResult
+
+				<ul>
+					<li>View Engine </li>
+					<li>Render View</li>
+				</ul></li>
+			<li>Other Action Results
+
+				<ul>
+					<li>Write Response</li>
+				</ul></li>
+		</ul></li>
+	<li>Result Filters - OnResultExecuted</li>
+</ul>
+
+<h3>Common Action Result Types:</h3>
+
+<ul>
+	<li>ContentResult</li>
+	<li>ViewResult</li>
+	<li>JsonResult</li>
+	<li>FileResult</li>
+	<li>EmptyResult</li>
+	<li>RedirectResult</li>
+</ul>
+
+<h2>View Results and the View Engine</h2>
+
+<ul>
+	<li>Razor View Engine </li>
+	<li>Legacy View Engine </li>
+</ul>
+
+<h3>General View Engine Concept</h3>
+
+<blockquote>
+<p>Action Invoker </p>
+</blockquote>
+
+<ul>
+	<li>ViewResultBase - ExecuteResult()</li>
+	<li>ViewResult - FindView()</li>
+	<li>ViewEngine - FindView()</li>
+	<li>ViewEngineResult</li>
+	<li>ViewResultBase - ExecuteResult()</li>
+	<li>ViewRenderEngine</li>
+</ul>
+
+<h3>Implements IViewEngine</h3>
+
+<ul>
+	<li>FindView</li>
+	<li>FindPartialView</li>
+	<li>ReleaseView</li>
+</ul>
+
+</body>
+</html>
+
