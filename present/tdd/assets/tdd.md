@@ -5,13 +5,13 @@
 
 # Before We Start! 
 
-- There is just Code. 
-There is no good or bad.
+- There is just Code; 
+there is no good or bad.
 - Everything we are going to 
 discuss is already known to you!
-- Most of them are subjective 
-- Also debatable ..
-
+- Using automated feedback loops 
+doesn't mean no manual testing. 
+- Most of them are subjective, also debatable ..
 
 ![](nbc.jpg)
 
@@ -26,7 +26,26 @@ discuss is already known to you!
 - Q&A
 
 ---
+## Testing
 
+- Testing is an act of gaining insights. 
+	1. Is the app is usable.
+	2. Whats the user experience like?
+	3. Does the workflow make sense?
+
+---
+## Verification
+
+- Verification, on the other hand, is an act of confirmation.
+	1. Does the code do what it's supposed to do?
+	2. Are the calculations right?
+	3. Regression, is the program working as excepted after the code or config. changes?
+	
+---
+
+## Do manual testing to gain insights and automated versification to influence the design and to confrim the code continues to meet the excpetations. 
+
+---
 ## What is a "Unit Test"
 
 "it's a situational thing - the team decides what makes sense to be a unit for the purposes of their understanding of the system and its testing." - Martin Fowler
@@ -154,6 +173,15 @@ In short, tests that run end-to-end through the UI are: brittle, expensive to wr
 
 ---
 
+## TDD is Not New!
+
+- 1960: NASA used a similar process in project Mercury.
+- 1994: Simple Smalltalk testing (SUnit)
+- 1999: eXtreme Programming by Kent Beck
+- 2002: TDD by Example by Kent Beck 
+
+---
+
 ## TDD Cycle 
 ### Red - Green - Refactor
 
@@ -163,6 +191,11 @@ In short, tests that run end-to-end through the UI are: brittle, expensive to wr
 
 **TDD is not about "Testing", its more about "Development".**
 
+---
+
+### We rarely have trouble writing code, but they find it extremely hard to write tests before writing code.
+
+### The nature and complexity of code widely affects the ability to write and run automated tests
 ---
 
 ## Prepare to Experince Awesomeness!
@@ -222,11 +255,20 @@ git push origin master
 
 ---
 
+## Canary Test
+
+### Start with a "Canary Test". 
+
+Its the simplest test you write to make sure your good with the code setup. 
+
+![right](TT.png)
+
+---
+
 ## TDD: Step 1 
 ## Write a "Failing Test"
 
 ---
-
 ### How to Write Super Awesome "Unit Tests"
 - Name - 3 Parts
     - Unit Of Work
@@ -237,7 +279,7 @@ git push origin master
     - Act 
     - Assert
 
-![Right](ca3.jpg)
+![Right](ow.png)
 
 ---
 
@@ -249,12 +291,21 @@ git push origin master
 - Write "Solitary", avoide Social Tests!
 - Don’t use variables, constants and complex objects in your assertions, rather stick with literals. 
 
-![Left](ow.png)
+![Left](ca3.jpg)
 
 ---
 
 ## TDD: Step 2 
 ## Just code enough to "Pass the Test"
+
+---
+
+## How to make a Test "Green"?
+1. Fake It: Return a hard coded value, replace the hard coded values with variables; until the real code exits. 
+2. make It: Real code implementation, if it is immediately obvious. 
+3. Triangulate: Generalize code, when there are two or more examples.
+
+![right 100%](oa.png)
 
 ---
 
@@ -264,7 +315,7 @@ git push origin master
  - Rule 2: Read "Rule 1" - Yes, as small as possible. 
 
 
-![Left](bs3.png)
+![Left 135%](ca2.png)
 
 ---
 ## Why Baby Steps?
@@ -307,6 +358,27 @@ Treat them as important as production code because they allow you to make change
 
 ---
 
+## TDD Benefits 
+### For Business
+- Requirement Verification 
+- Regression Catching 
+- Lower Maintenance Costs 
+
+![right](mei.png)
+
+---
+
+## TDD Benefits 
+### For Developers
+- Design First
+- Avoiding Over-Engineering
+- Momentum/ Developer Velocity
+- Confidence
+
+![left](mei2.png)
+
+---
+
 ## TDD Pitfalls
 
 - Coverage as a goal.
@@ -316,6 +388,8 @@ Treat them as important as production code because they allow you to make change
 - Not listening to the tests.
 - Not tackling slow tests.
 - Leaving broken tests.
+
+![right 130%](tl.png)
 
 ---
 
@@ -362,6 +436,12 @@ Treat them as important as production code because they allow you to make change
 
 - [Martin Flower](https://martinfowler.com/bliki)
 - [James Shore](http://www.jamesshore.com/Blog)
+
+--- 
+
+## Reference 
+
+- [Test-Driving JavaScript Applications](https://pragprog.com/book/vsjavas/test-driving-javascript-applications) by Venkat Subramaniam 
 
 ---
 
