@@ -1,0 +1,8 @@
+## Advanced Git
+### Three Areas Where Code Lives
+### Fixing Mistakes
+- checkout
+- reset
+- revert
+- clean
+
